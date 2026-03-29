@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Hello Flasky</title>
+    {{ bootstrap.load_css() }}
+</head>
+<body>
+<div class="container mt-5">
+    <h1>Hello, {{ name }}!</h1>
+    <form method="POST" class="mt-3">
+        {{ form.hidden_tag() }}
+        <div class="mb-3">
+            {{ form.name.label(class="form-label") }}
+            {{ form.name(class="form-control") }}
+        </div>
+        {{ form.submit(class="btn btn-primary") }}
+    </form>
+</div>
+
+{{ bootstrap.load_js() }}
+</body>
+</html>
